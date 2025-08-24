@@ -41,7 +41,7 @@ A deep learning project that detects and classifies human emotions from facial e
 
 ## Author
 
-**Unaiza Nouman** — [[LinkedIn](https://www.linkedin.com/in/unaiza-nouman) ](https://www.linkedin.com/in/unaiza-nouman-2j9u0n6e/) 
+**Unaiza Nouman** — https://www.linkedin.com/in/unaiza-nouman-2j9u0n6e/
 
 ---
 
