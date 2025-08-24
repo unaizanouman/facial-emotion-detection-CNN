@@ -10,7 +10,7 @@ A deep learning project that detects and classifies human emotions from facial e
 - Seven emotion classes: Angry, Disgusted, Fearful, Happy, Neutral, Sad, Surprised  
 - Modular, easy-to-understand code for future enhancement and experimentation
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - Python 3.x  
 - TensorFlow / Keras  
@@ -33,11 +33,55 @@ A deep learning project that detects and classifies human emotions from facial e
 - numpy
 - pandas
 
+## How to Run
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/your-username/FacialEmotionRecog.git
+cd FacialEmotionRecog
+```
+
+2. **Create and activate a virtual environment**
+```bash
+python3 -m venv facial_env310
+source facial_env310/bin/activate
+```
+
+3. **Install the required libraries**
+If you have a `requirements.txt` file:
+```bash
+pip install -r requirements.txt
+```
+
+If not, install manually:
+```bash
+pip install tensorflow opencv-python pandas numpy matplotlib
+```
+
+4. **Train the model**
+> Skip this step if `emotion_detection_model_gsn.h5` is already available.
+```bash
+python train_model.py
+```
+
+5. **Run the emotion detection system**
+```bash
+python main.py
+```
+
 ## Dataset
 
-- Name: FER-2013
-- Source: Kaggle FER2013 Dataset
-- Contains 48x48 grayscale images categorized into 7 emotion classes.
+- **FER-2013**: Publicly available dataset containing facial emotion expressions.  
+  Source: [Kaggle - FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)
+
+## Dependencies
+
+- Python 3.10+
+- TensorFlow
+- OpenCV
+- NumPy
+- Pandas
+- Matplotlib
 
 ## Author
 
