@@ -3,10 +3,10 @@ import cv2
 import tensorflow as tf
 import os
 
-# ✅ Load the trained model
+#  Load the trained model
 model = tf.keras.models.load_model('emotion_detection_model_gsn.h5')
 
-# ✅ Emotion label dictionary (maps model's output to emotion names)
+#  Emotion label dictionary (maps model's output to emotion names)
 emotion_dict = {
     0: "Angry", 
     1: "Disgusted", 
@@ -17,10 +17,10 @@ emotion_dict = {
     6: "Surprised"
 }
 
-# ✅ Load Haar Cascade for face detection
+#  Load Haar Cascade for face detection
 haar_path = 'haarcascade_frontalface_default.xml'
 if not os.path.exists(haar_path):
-    print(f"❌ Haar Cascade file not found at: {haar_path}")
+    print(f" Haar Cascade file not found at: {haar_path}")
     exit()
 
 facecasc = cv2.CascadeClassifier(haar_path)
@@ -31,13 +31,13 @@ cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
     if not ret:
-        print("❌ Failed to capture frame from webcam.")
+        print(" Failed to capture frame from webcam.")
         break
 
-    # ✅ Convert frame to grayscale for face detection
+    #  Convert frame to grayscale for face detection
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # ✅ Detect faces in the image
+    #  Detect faces in the image
     faces = facecasc.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
 
     for (x, y, w, h) in faces:
